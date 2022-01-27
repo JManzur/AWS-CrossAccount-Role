@@ -1,0 +1,52 @@
+{
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Description":"Cross account role for ControlTower",
+   "Resources":{
+      "ControlTowerRole":{
+         "Type":"AWS::IAM::Role",
+         "Properties":{
+            "Path":"/",
+            "RoleName":"AWSControlTowerExecution",
+            "Policies":[
+               {
+                  "PolicyName":"SchedulerPolicy",
+                  "PolicyDocument":{
+                     "Version":"2012-10-17",
+                     "Statement":[
+                        {
+                           "Action":"*",
+                           "Resource":"*",
+                           "Effect":"Allow",
+                           "Sid":"ControlTowerCrossAccountRole"
+                        }
+                     ]
+                  }
+               }
+            ],
+            "AssumeRolePolicyDocument":{
+               "Version":"2012-10-17",
+               "Statement":[
+                  {
+                     "Action":"sts:AssumeRole",
+                     "Effect":"Allow",
+                     "Principal":{
+                        "AWS":"arn:aws:iam::XXXXXXXXX:root"
+                     }
+                  }
+               ]
+            }
+         }
+      }
+   },
+   "Outputs":{
+      "CrossAccountRoleArn":{
+         "Description":"Cross account role for ControlTower",
+         "Value":{
+            "Fn::GetAtt":[
+               "ControlTowerRole",
+               "Arn"
+            ]
+         }
+      }
+   }
+}
