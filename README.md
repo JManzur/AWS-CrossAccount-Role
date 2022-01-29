@@ -1,8 +1,6 @@
-# CloudFormation template to deploy a Control Tower Cross-Account Role
+# Control Tower Cross-Account Role
 
-This CloudFormation template creates an IAM role with administrator access and builds a trust relationship with the control tower management/master account. This role can be used to perform a switch role action or to enroll the account in the control tower organization.
-
-> :warning: To use this template, replace the account ID number on line 33 in the .json file. :warning:	
+This template creates an IAM role with administrator access and builds a trust relationship with the control tower management/master account. This role can be used to perform a switch role action or to enroll the account into the control tower organization.
 
 ## Deployment diagram:
 
@@ -45,7 +43,3 @@ This CloudFormation template creates an IAM role with administrator access and b
     ]
 }
 ```
-
-## Documentation:
-
-- [Creating a stack on the AWS CloudFormation console](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html)
