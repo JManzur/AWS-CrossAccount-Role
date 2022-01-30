@@ -7,5 +7,5 @@ variable "aws_region" {
 # Trusted Amazon Account ID
 variable "TrustedAccountID" {
   type    = number
-  default = 632958987962
+  default = 1111111111
 }
