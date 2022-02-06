@@ -21,7 +21,7 @@ This template creates an IAM role with administrator access and builds a trust r
             "Action":"*",
             "Resource":"*",
             "Effect":"Allow",
-            "Sid":"ControlTowerCrossAccountRole"
+            "Sid":"AWSControlTowerExecution"
         }
     ]
 }

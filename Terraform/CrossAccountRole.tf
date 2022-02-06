@@ -29,7 +29,7 @@ resource "aws_iam_role_policy" "AWSControlTowerExecutionPolicy" {
         "Action" : "*",
         "Resource" : "*",
         "Effect" : "Allow",
-        "Sid" : "ControlTowerCrossAccountRole"
+        "Sid" : "AWSControlTowerExecution"
       }
     ]
   })

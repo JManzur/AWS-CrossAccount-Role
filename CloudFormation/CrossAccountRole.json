@@ -17,7 +17,7 @@
                            "Action":"*",
                            "Resource":"*",
                            "Effect":"Allow",
-                           "Sid":"ControlTowerCrossAccountRole"
+                           "Sid":"AWSControlTowerExecution"
                         }
                      ]
                   }
